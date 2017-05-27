@@ -7,3 +7,4 @@ I'm using the Pandas datset in Python to transform the data so it is in the prop
 
 THE CODE--
 The web-scraped files for each airline are in "myFolderPath" and include the Fleet information, captian pay scale, and first officer pay scale. The data needs to be manipulated a bit before transforming it into the PostgreSQL database. 
+Funcitions include: csv reader (the web-scraped files are in .csv), string replace, and writing to a csv. 
