@@ -7,7 +7,8 @@ import csv
 
 # Environment Settings
 myFolderPath = 'C:\\Airport Project\WebScrape\\'
-OutputPath = myFolderPath + 'PythonResults\\'
+git = 'C:\\Airport Project\Python-pandas-data-manipulation\\'
+OutputPath = git + 'csv\\'
 Cargo = myFolderPath + 'Cargo\\'
 Legacy = myFolderPath + 'LEGACY_03_04_2017\\'
 MidMajor = myFolderPath + 'Mid_Major_03_04_2017\\'
@@ -163,3 +164,7 @@ df['Fleet_Count'] = df['Fleet_Count'].str.replace('"','')
 print(df)
 #df = pd.concat([df,delta_fleet]) #for some reason Delta is the only data that has the fleet counts as an INT
 #pd.dataframe.concat([fedex_fleet,ups_fleet,alaska_fleet,american_fleet,delta_fleet,hawaiian_fleet,united_fleet,allegiant_fleet,frontier_fleet,jetblue_fleet,southwest_fleet,spirit_fleet,suncountry_fleet,virgin_fleet,airwisco_fleet,compass_fleet,endeavor_fleet,envoy_fleet,expressjet_fleet,gojet_fleet,horizon_fleet,mesa_fleet,piedmont_fleet,psa_fleet,republic_fleet,skywest_fleet,transstates_fleet],ignore_index=True)
+
+
+##writing dataframe to csv (to be imported into postgres)
+df.to_csv(OutputPath+ '\\fleet.csv')
